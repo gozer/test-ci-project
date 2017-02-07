@@ -15,7 +15,8 @@ set -x
 export GIT_SSH_COMMAND="ssh -i ./id_rsa -o UserKnownHostsFile=./known_hosts"
 
 rm -rf /tmp/test-ci-project
-git clone --depth 1 git@github.com:mhart/test-ci-project.git /tmp/test-ci-project
+git clone --depth 1 https://github.com/gozer/test-ci-project.git /tmp/test-ci-project
+
 cd /tmp/test-ci-project
 
 npm install && npm test
